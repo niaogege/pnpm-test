@@ -5,5 +5,5 @@ class Player {
 }
 
 export default {
-  player: new Player(),
+  player: new Player()
 };
