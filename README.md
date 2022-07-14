@@ -41,8 +41,40 @@ packages:
 hoist-pattern[]=*lodash*
 ```
 
-### 实战走起
+### 使用commitizen规范commit提交格式
+
+commitizen 的作用主要是为了生成标准化的 commit message，符合 Angular 规范。
+一个标准化的 commit message 应该包含三个部分：Header、Body 和 Footer，其中的 Header 是必须的，Body 和 Footer 可以选填。
+
+项目需要安装
+```js
+pnpm install -wD commitizen cz-conventional-changelog
+```
+
+然后工程需要修改2处配置
+
+```json
+// package.json
+
+"script": {
+  "commit": "cz"
+}
+"config": {
+  "commitizen": {
+    "path": "cz-conventional-changelog"
+  }
+},
+```
+后面就能用*pnpm commit*代替*git commit*进行代码提交
 
 
+### commitlint && husky
+
+对提交行为进行约束
+
+前面我们提到，通过 **commitizen** && **cz-conventional-changelog** 可以规范我们的 commit message，但是同时也存在一个问题，如果用户不通过 pnpm commit 来提交代码，而是直接通过 git commit 命令来提交代码，就能绕开 commit message 检查，这是我们不希望看到的。
+因此接下来我们使用 commitlint 结合 husky 来对我们的提交行为进行约束。在 git commit 提交之前使用 git 钩子来验证信息，阻止不符合规范的commit 提交。
+
+安装commitlint和husky
 ## 参考
 - [为什么现在我更推荐 pnpm 而不是 npm/yarn?](https://mp.weixin.qq.com/s/h7MfgVfR4c9YxtO44C-lkg)
