@@ -10,6 +10,12 @@ importers:
       '@changesets/cli': registry.npmmirror.com/@changesets/cli/2.23.2
       eslint: registry.npmmirror.com/eslint/8.19.0
 
+  packages/auto-ubt:
+    specifiers:
+      '@chendp/player': workspace:^1.0.0
+    dependencies:
+      '@chendp/player': link:../player
+
 packages:
 
   registry.npmmirror.com/@babel/code-frame/7.18.6:
