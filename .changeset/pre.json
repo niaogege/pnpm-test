@@ -1,0 +1,11 @@
+{
+  "mode": "exit",
+  "tag": "alpha",
+  "initialVersions": {
+    "@chendap/auto-ubt": "0.0.0",
+    "@chendap/player": "0.0.1"
+  },
+  "changesets": [
+    "sour-chicken-look"
+  ]
+}
