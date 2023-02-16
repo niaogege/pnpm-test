@@ -107,6 +107,17 @@ pnpm install -wD commitizen cz-conventional-changelog
 ### 自动化更改版本
 
 [changesets/action@v1](https://github.com/changesets/action)
+[pnpm using-changesets ](https://www.pnpm.cn/using-changesets#bump-up-package-versions)
+
+### .npmrc 文件有啥作用
+
+.npmrc，可以理解成 **npm running cnfiguration**, 即 npm 运行时配置文件。简单点说， .npmrc 可以设置 package.json 中依赖包的安装来源，既从哪里下载依赖包
+
+```js
+// .npmrc
+hoist-pattern[]=*lodash*
+strict-peer-dependencies=false
+```
 
 ## 参考
 
