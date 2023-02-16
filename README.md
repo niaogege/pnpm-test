@@ -14,6 +14,8 @@ hhhh
 - pnpm changeset version 修改包为正式版本
 - pnpm changeset publish 发布
 
+> "version": "0.0.4",
+
 ### workspace 配置
 
 在需要 monorepo 项目配置**pnpm-workspace.yaml**
@@ -99,6 +101,10 @@ pnpm install -wD commitizen cz-conventional-changelog
   }
 }
 ```
+
+### 自动化更改版本
+
+[changesets/action@v1](https://github.com/changesets/action)
 
 ## 参考
 

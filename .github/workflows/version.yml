@@ -1,0 +1,38 @@
+name: ChangeVersion
+
+on:
+  push:
+    branches:
+      - release
+
+jobs:
+  version:
+    name: change version
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [16.x]
+    steps:
+      - name: Checkout # 步骤1
+        uses: actions/checkout@v1 # 使用的动作。格式：userName/repoName。作用：检出仓库，获取源码。 官方actions库：https://github.com/actions
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 7
+
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: "pnpm"
+
+      - name: Install Dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Create Release Pull Request
+        uses: changesets/action@v1
+        with:
+          version: pnpm changeset version
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
