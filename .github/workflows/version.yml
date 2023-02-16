@@ -28,9 +28,9 @@ jobs:
           cache: "pnpm"
 
       - name: Install Dependencies
-        run: pnpm install --frozen-lockfile
+        run: pnpm install
 
-      - name: Create Release Pull Request
+      - name: Change version
         uses: changesets/action@v1
         with:
           version: pnpm changeset version
