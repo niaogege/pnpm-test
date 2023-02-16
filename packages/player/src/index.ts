@@ -7,6 +7,7 @@ class Player {
 
 export default {
   player: new Player(),
+  date: new Date(),
 };
 
 export const pkgName = "player";

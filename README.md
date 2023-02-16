@@ -42,6 +42,8 @@ packages:
 "packageManager": "pnpm@6.30.0"
 ```
 
+Run pnpm publish -r. This command will publish all packages that have bumped versions not yet present in the registry.
+
 ### 禁止依赖提升
 
 默认情况下 PNPM 安装的依赖也是会被提升的。如果，需要 PNPM 禁止依赖提升，我们可以通过在 Monorepo 项目工作区下的 .npmrc 文件中 配置[10]，例如只提升 lodash：
@@ -105,6 +107,17 @@ pnpm install -wD commitizen cz-conventional-changelog
 ### 自动化更改版本
 
 [changesets/action@v1](https://github.com/changesets/action)
+[pnpm using-changesets ](https://www.pnpm.cn/using-changesets#bump-up-package-versions)
+
+### .npmrc 文件有啥作用
+
+.npmrc，可以理解成 **npm running cnfiguration**, 即 npm 运行时配置文件。简单点说， .npmrc 可以设置 package.json 中依赖包的安装来源，既从哪里下载依赖包
+
+```js
+// .npmrc
+hoist-pattern[]=*lodash*
+strict-peer-dependencies=false
+```
 
 ## 参考
 

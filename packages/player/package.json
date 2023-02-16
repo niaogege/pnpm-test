@@ -1,18 +1,23 @@
 {
   "name": "@chendap/player",
   "version": "0.0.4",
-  "description": "",
+  "description": "custom player  播放器相关",
   "main": "src/index.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc src/index.ts --outDir dist",
     "watch": "tsc src/index.ts --outDir dist --watch"
   },
-  "keywords": [],
+  "keywords": [
+    "player"
+  ],
   "author": "chendap",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/",
     "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/niaogege/pnpm-test.git"
   },
   "license": "ISC"
 }

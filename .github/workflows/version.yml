@@ -5,6 +5,8 @@ on:
     branches:
       - release
 
+concurrency: ${{ github.workflow }}-${{ github.ref }}
+
 jobs:
   version:
     name: change version
@@ -30,9 +32,14 @@ jobs:
       - name: Install Dependencies
         run: pnpm install
 
+      - name: Setup npmrc
+        run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > .npmrc
+
       - name: Change version
         uses: changesets/action@v1
         with:
-          version: pnpm changeset version
+          commit: "chore: update versions"
+          title: "chore: update versions"
+          version: pnpm run version
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
