@@ -38,13 +38,13 @@ jobs:
       - name: Build Packages
         run: pnpm run build
 
-      - name: Creating .npmrc
-        run: |
-          cat << EOF > "$HOME/.npmrc"
-            //registry.npmjs.org/:_authToken=$NPM_TOKEN
-          EOF
-        env:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+      # - name: Creating .npmrc
+      #   run: |
+      #     cat << EOF > "$HOME/.npmrc"
+      #       //registry.npmjs.org/:_authToken=$NPM_TOKEN
+      #     EOF
+      #   env:
+      #     NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: Publish to npm
         id: changesets

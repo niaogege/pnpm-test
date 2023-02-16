@@ -3,7 +3,7 @@ name: ChangeVersion
 on:
   push:
     branches:
-      - release
+      - [release]
 
 jobs:
   version:
