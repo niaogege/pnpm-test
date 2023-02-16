@@ -1,6 +1,6 @@
 {
   "name": "@chendap/auto-ubt",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "auto ubt 自动化埋点",
   "main": "src/index.ts",
   "scripts": {
