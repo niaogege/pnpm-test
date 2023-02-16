@@ -1,4 +1,4 @@
-class AutoUbt {
+export class AutoUbt {
   public version;
   constructor() {
     this.version = "0.0.1";

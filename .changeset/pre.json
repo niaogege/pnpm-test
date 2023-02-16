@@ -1,11 +1,11 @@
 {
-  "mode": "exit",
-  "tag": "alpha",
+  "mode": "pre",
+  "tag": "beta",
   "initialVersions": {
-    "@chendap/auto-ubt": "0.0.0",
-    "@chendap/player": "0.0.1"
+    "@chendap/auto-ubt": "0.0.2",
+    "@chendap/player": "0.0.2"
   },
   "changesets": [
-    "sour-chicken-look"
+    "famous-carrots-divide"
   ]
 }

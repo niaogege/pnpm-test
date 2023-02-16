@@ -3,4 +3,4 @@
 "@chendap/player": patch
 ---
 
-change two packages alpha
+add scripts
