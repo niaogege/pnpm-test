@@ -5,6 +5,8 @@ on:
     branches:
       - release
 
+concurrency: ${{ github.workflow }}-${{ github.ref }}
+
 jobs:
   version:
     name: change version
@@ -38,6 +40,6 @@ jobs:
         with:
           commit: "chore: update versions"
           title: "chore: update versions"
-          version: pnpm changeset version
+          version: pnpm version
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}

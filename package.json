@@ -10,7 +10,8 @@
     "build:child": "pnpm -r run build",
     "clear": "pnpm 'packages/*/{lib, node_modules}' && rimraf node_modules",
     "commit": "cz",
-    "watch": "pnpm --parallel -r run watch"
+    "watch": "pnpm --parallel -r run watch",
+    "version": "pnpm changeset version"
   },
   "config": {
     "commitizen": {
