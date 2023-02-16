@@ -8,3 +8,5 @@ class Player {
 export default {
   player: new Player(),
 };
+
+export const pkgName = "player";

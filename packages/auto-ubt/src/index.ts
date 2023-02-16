@@ -11,4 +11,5 @@ export default {
     return "this is test";
   },
   autoUbt: new AutoUbt(),
+  name: "auto-ubt",
 };

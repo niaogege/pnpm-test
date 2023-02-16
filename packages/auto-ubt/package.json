@@ -1,6 +1,6 @@
 {
   "name": "@chendap/auto-ubt",
-  "version": "0.0.3-beta.0",
+  "version": "0.0.3",
   "description": "",
   "main": "src/index.ts",
   "scripts": {

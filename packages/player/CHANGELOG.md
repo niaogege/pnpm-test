@@ -1,5 +1,18 @@
 # @chendap/player
 
+## 0.0.3
+
+### Patch Changes
+
+- 8e98647: add scripts
+- add pkgName
+
+## 0.0.3-beta.1
+
+### Patch Changes
+
+- add pkgName
+
 ## 0.0.3-beta.0
 
 ### Patch Changes
