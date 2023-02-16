@@ -42,6 +42,8 @@ packages:
 "packageManager": "pnpm@6.30.0"
 ```
 
+Run pnpm publish -r. This command will publish all packages that have bumped versions not yet present in the registry.
+
 ### 禁止依赖提升
 
 默认情况下 PNPM 安装的依赖也是会被提升的。如果，需要 PNPM 禁止依赖提升，我们可以通过在 Monorepo 项目工作区下的 .npmrc 文件中 配置[10]，例如只提升 lodash：

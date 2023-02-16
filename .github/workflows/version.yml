@@ -30,17 +30,14 @@ jobs:
       - name: Install Dependencies
         run: pnpm install
 
-      - name: Creating .npmrc
-        run: |
-          cat << EOF > "$HOME/.npmrc"
-            //registry.npmjs.org/:_authToken=$NPM_TOKEN
-          EOF
-        env:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+      - name: Setup npmrc
+        run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > .npmrc
 
       - name: Change version
         uses: changesets/action@v1
         with:
+          commit: "chore: update versions"
+          title: "chore: update versions"
           version: pnpm changeset version
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
