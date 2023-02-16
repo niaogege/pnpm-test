@@ -1,13 +1,17 @@
 {
-  "name": "@chendp/auto-ubt",
-  "version": "1.0.0",
+  "name": "@chendap/auto-ubt",
+  "version": "0.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/index.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
+  "author": "chendap",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  },
   "license": "ISC",
   "dependencies": {
     "@chendp/player": "workspace:^1.0.0"
