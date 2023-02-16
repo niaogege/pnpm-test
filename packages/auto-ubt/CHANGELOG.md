@@ -1,4 +1,4 @@
-# @chendap/player
+# @chendap/auto-ubt
 
 ## 0.0.3-beta.0
 
@@ -18,9 +18,3 @@
 ### Patch Changes
 
 - change two packages alpha
-
-## 0.0.1
-
-### Patch Changes
-
-- change 1th publish

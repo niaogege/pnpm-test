@@ -7,8 +7,10 @@
     "postinstall": "husky install",
     "preinstall": "npx only-allow pnpm",
     "build": "pnpm --filter=@chendap/* run build",
+    "build:child": "pnpm -r run build",
     "clear": "pnpm 'packages/*/{lib, node_modules}' && rimraf node_modules",
-    "commit": "cz"
+    "commit": "cz",
+    "watch": "pnpm --parallel -r run watch"
   },
   "config": {
     "commitizen": {

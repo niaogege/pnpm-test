@@ -1,0 +1,11 @@
+{
+  "mode": "pre",
+  "tag": "beta",
+  "initialVersions": {
+    "@chendap/auto-ubt": "0.0.2",
+    "@chendap/player": "0.0.2"
+  },
+  "changesets": [
+    "famous-carrots-divide"
+  ]
+}
