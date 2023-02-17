@@ -1,5 +1,11 @@
 # @chendap/auto-ubt
 
+## 0.0.6
+
+### Patch Changes
+
+- ab56b6c: the first auto change version
+
 ## 0.0.5
 
 ### Patch Changes
