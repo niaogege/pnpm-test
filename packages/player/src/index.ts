@@ -8,6 +8,7 @@ class Player {
 export default {
   player: new Player(),
   date: new Date(),
+  debugger: false,
 };
 
 export const pkgName = "player";
