@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "packageManager": "pnpm@7.21.0",
   "scripts": {
     "postinstall": "husky install",
     "preinstall": "npx only-allow pnpm",
@@ -11,7 +12,8 @@
     "clear": "pnpm 'packages/*/{lib, node_modules}' && rimraf node_modules",
     "commit": "cz",
     "watch": "pnpm --parallel -r run watch",
-    "version": "pnpm changeset version"
+    "version": "pnpm changeset version",
+    "publish": "pnpm changeset publish -r"
   },
   "config": {
     "commitizen": {
