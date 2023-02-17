@@ -16,6 +16,11 @@ hhhh
 
 > "version": "0.0.4",
 
+也阔以进入 Prerelease 模式
+
+- pnpm changeset pre enter <tag> // 进入测试版本模式
+- pnpm changeset pre exit // 退出当前测试版本
+
 ### workspace 配置
 
 在需要 monorepo 项目配置**pnpm-workspace.yaml**
@@ -42,7 +47,9 @@ packages:
 "packageManager": "pnpm@6.30.0"
 ```
 
-Run pnpm publish -r. This command will publish all packages that have bumped versions not yet present in the registry.
+### pnpm publish -r
+
+Run **pnpm publish -r**. This command will publish all packages that have bumped versions not yet present in the registry.
 
 ### 禁止依赖提升
 

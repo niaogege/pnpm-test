@@ -13,4 +13,5 @@ export default {
   autoUbt: new AutoUbt(),
   name: "auto-ubt",
   date: new Date(),
+  debugger: false,
 };
